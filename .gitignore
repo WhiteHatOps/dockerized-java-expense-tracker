@@ -31,3 +31,15 @@ build/
 
 ### VS Code ###
 .vscode/
+
+# Exclude MySQL Raw Data (Crucial for DevOps)
+mysql-data/
+./mysql-data/
+*.sock
+*.lock
+
+# Exclude Java Build Artifacts & IDE files
+target/
+.idea/
+*.iml
+.DS_Store
