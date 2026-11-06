@@ -1,3 +1,24 @@
+# Multi-Container Dockerized Java Expense Tracker
+
+A production-grade, multi-container architecture for a Java Expense Tracker application, orchestrated seamlessly using Docker Compose and backed by a persistent MySQL database. This project demonstrates DevOps best practices in service isolation, network bridging, and data persistence.
+
+### 🛠️ Architecture & Tech Stack
+* **Application Service:** Java (packaged via optimized Multi-Stage Dockerfile)
+* **Database Service:** MySQL 8.0 (Containerized)
+* **Orchestration:** Docker Compose (Multi-Service Blueprint)
+* **Data Persistence:** Named Docker Volumes
+* **Network Isolation:** Custom Bridge Network
+
+### 🚀 Key DevOps & Engineering Features
+* **Service Dependency Control:** Implemented conditional startup logic to ensure the MySQL database is fully healthy before the Java application boots up.
+* **Stateful Data Persistence:** Utilized named Docker Volumes (`mysql_data`) to prevent data loss during container restarts or teardowns.
+* **Secure Environment Management:** Separated database credentials from the infrastructure code using environment variables (`.env` integration ready).
+* **Network Segregation:** Configured an isolated bridge network, allowing secure micro-runtime communication between the Java backend and MySQL while blocking unauthorized external exposure.
+* **Optimized Image Footprint:** Application image built utilizing a multi-stage workflow, stripping away build tools (Maven/Gradle) to ensure a minimal and secure final runtime layer.
+
+
+
+
 ![Language](https://img.shields.io/badge/language-Java%20-blue.svg)
 ![Technologies](https://img.shields.io/badge/technologies-Spring_boot%20-green.svg)
 ![Technologies](https://img.shields.io/badge/technologies-Spring_MVC%20-green.svg)
